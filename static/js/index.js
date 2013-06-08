@@ -17,18 +17,18 @@ JackTest = (function() {
             mouseover : function () {
                 var curStarPos = $(this).index() + 1;
                 var curStarIndex = $(this).index();
-                $(_this.dom+":gt("+curStarIndex+")").attr('src','/static/images/star-off.png');
-                $(_this.dom+":lt("+curStarPos+")").attr('src','/static/images/star-on.png');
+                $(_this.dom+":gt("+curStarIndex+")").attr('src','static/images/star-off.png');
+                $(_this.dom+":lt("+curStarPos+")").attr('src','static/images/star-on.png');
             },
             mouseout : function () {
                 var curScoreIndex = $(_this.scoreName).val() - 1;
                 var curScore = $(_this.scoreName).val();
                 if (curScore == 0){
-                    $(_this.dom).attr('src','/static/images/star-off.png');
+                    $(_this.dom).attr('src','static/images/star-off.png');
                 }else{
                     console.log(curScore);
-                    $(_this.dom+":gt("+curScoreIndex+")").attr('src','/static/images/star-off.png');
-                    $(_this.dom+":lt("+curScore+")").attr('src','/static/images/star-on.png');
+                    $(_this.dom+":gt("+curScoreIndex+")").attr('src','static/images/star-off.png');
+                    $(_this.dom+":lt("+curScore+")").attr('src','static/images/star-on.png');
                 }
             },
             click : function () {
